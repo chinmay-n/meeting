@@ -1,0 +1,10 @@
+<ul>
+    <div *ngFor="let course of coursesObs | async">
+        <ngb-alert type="info" [dismissible]="false">
+            <h3><a href="#">{{course.day}}</a> </h3>
+            <p>Date:{{course.day}}.{{course.month}}.{{course.year}}</p>
+            <p>Timing:{{course.startTimeH}}:{{course.startTimeM}} to {{course.endTimeH}}:{{course.endTimeM}}</p>
+            <p></p>
+        </ngb-alert> 
+    </div>
+</ul>

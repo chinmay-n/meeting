@@ -1,0 +1,23 @@
+<p>Simple datepicker</p>
+
+<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next">
+</ngb-datepicker>
+<hr/>
+
+<button #selDate class="btn btn-sm btn-outline-primary mr-2" (click)="selectDate()">Select Date</button>
+
+<hr/>
+<div #timeSel>
+Start Time
+<div (align)="center">
+<ngb-timepicker #stime [(ngModel)]="time1" (minuteStep)="15"></ngb-timepicker>
+</div>
+End Time
+<ngb-timepicker #etime [(ngModel)]="time2" (minuteStep)="15"></ngb-timepicker>
+<button #selTime class="btn btn-sm btn-outline-primary mr-2" (click)="selectTime()">Select Timeslot</button>
+</div>
+<hr>
+<input type="text" class="form-control" id="name" required [(ngModel)]="description" name="desc" placeholder="Description">
+<hr>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)=saveMeeting()>Save Meeting</button>
+<hr>
